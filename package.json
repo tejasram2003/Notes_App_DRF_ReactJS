@@ -1,0 +1,18 @@
+
+{
+  "name": "notes_django_react",
+  "version": "1.0.0",
+  "description": "A simple app created using Django rest framework and React.js, where users can create, update and delete notes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+"devDependencies": {
+    "vite": "^5.0.8"
+  }
+}
+
+
