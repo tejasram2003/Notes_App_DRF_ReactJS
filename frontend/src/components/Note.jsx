@@ -9,12 +9,24 @@ function Note({note, onDelete, onUpdate}) {
         year: "numeric",
     });
 
-    console.log(note);
+    const formattedReminderTime = new Date(note.reminder).toLocaleString("en-US", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+    });
+
+    // console.log(note);
 
     return (
         <div className="note-container">
             <h2 className="note-title">{note.title}</h2>
             <p className="note-content">{note.content}</p>
+            {note.reminder && formattedReminderTime && (
+                // console.log(note.reminder),
+                <p className="note-reminder">Reminder: {formattedReminderTime}</p>
+            )}
             <p className="note-date">{formattedDate}</p>
             <button className="delete-button" onClick={() => onDelete(note.id)}>
                 Delete
